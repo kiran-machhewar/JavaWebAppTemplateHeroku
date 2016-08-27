@@ -11,6 +11,14 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <tomcat.version>8.0.28</tomcat.version>
   </properties>
+  <repositories>
+    <!--other repositories if any-->
+    <repository>
+        <id>project.local</id>
+        <name>project</name>
+        <url>file:${project.basedir}/repo</url>
+    </repository>
+  </repositories>
   <dependencies>
     <dependency>
         <groupId>org.apache.tomcat.embed</groupId>
@@ -42,6 +50,11 @@
         <artifactId>tomcat-jsp-api</artifactId>
         <version>${tomcat.version}</version>
     </dependency>
+    <dependency>
+	    <groupId>com.kmforce</groupId>
+	    <artifactId>myJar</artifactId>
+	    <version>1.0</version>
+	</dependency>
   </dependencies>
   <build>
     <finalName>embeddedTomcatSample</finalName>

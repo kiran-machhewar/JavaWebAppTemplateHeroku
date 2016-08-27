@@ -22,7 +22,7 @@ public class HelloServlet extends HttpServlet {
             throws ServletException, IOException {
         ServletOutputStream out = resp.getOutputStream();
         String outputFromJar = MyJarService.getOutputFromJar();
-        out.write(("hello heroku- JavaWebAppTemplateHeroku\n "+outputFromJar).getBytes());
+        out.write(("JavaWebAppTemplateHeroku\n "+outputFromJar).getBytes());
         out.flush();
         out.close();
     }
